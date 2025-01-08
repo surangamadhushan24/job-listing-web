@@ -3,9 +3,9 @@ import jobs from '../jobs.json'
 import JobListing from './JobListing'
 
 
-function JobListings() {
+function JobListings({isHome = false}) {
 
-  const recentJobs = jobs.slice(0, 3)
+  const jobListings = isHome ? jobs.slice(0, 3): jobs;
 
   return (
     <>
@@ -13,7 +13,7 @@ function JobListings() {
     <h2 className='fw-bold text-center mt-5 mb-3'>Browes jobs</h2>
     <div className="row row-cols-1 row-cols-md-3 g-4 " >
      
-      {recentJobs.map(job => (
+      {jobListings.map(job => (
         <JobListing key={job.id} job={job} />
         
       ))}

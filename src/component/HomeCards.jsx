@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card';
+import { Link } from 'react-router-dom';
 
 function HomeCards() {
     return (
@@ -11,7 +12,7 @@ function HomeCards() {
                         <div className="card-body">
                             <h5 className="card-title">For Developers</h5>
                             <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" className="btn btn-primary">Browse Job</a>
+                            <Link to="/jobs" className="btn btn-primary">Browse Job</Link>
                         </div>
                     </Card>
                 </div>
@@ -23,7 +24,7 @@ function HomeCards() {
                         <div className="card-body">
                             <h5 className="card-title">For Employers</h5>
                             <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" className="btn btn-dark">Add Job</a>
+                            <Link to="/add-jobs" className="btn btn-dark">Add Job</Link>
                         </div>
                     </Card>
                 </div>

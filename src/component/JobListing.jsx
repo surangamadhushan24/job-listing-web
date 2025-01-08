@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,7 +24,7 @@ function JobListing({job}) {
               <p className="card-text">{description}</p>
               <button type="button" onClick={() => setShowFullDescription(!showFullDescription)} className="btn btn-link">{showFullDescription?'Less':'More'}</button>
 
-              <a href={job.link} className="btn btn-dark">Apply</a>
+              <Link href={job.link} className="btn btn-dark">read more</Link>
             </div>
           </div>
         </div>
